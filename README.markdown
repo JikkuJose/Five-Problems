@@ -6,3 +6,10 @@ An attempt to solve the [5 problem challenge][blog] in an hour.
 
 ## Result
 I wasn't able to complete everything in 60 minutes; took me 3 minutes more.
+
+Later, Nikhil pointed that the fourth problem had a bug.
+
+## Running tests
+
+    $ bundle install
+    $ rake tests
