@@ -1,8 +1,5 @@
-require 'minitest'
-require 'minitest/reporters'
+require_relative '../test_helper'
 require_relative 'zip.rb'
-
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new({detailed_skip: false})]
 
 class ZipTest < Minitest::Test
   def setup
@@ -15,5 +12,3 @@ class ZipTest < Minitest::Test
     assert_equal @zip_a_and_b, Zip.them(first: @a, second: @b)
   end
 end
-
-Minitest.autorun

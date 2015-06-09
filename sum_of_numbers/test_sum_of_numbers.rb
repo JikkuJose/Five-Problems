@@ -1,8 +1,5 @@
-require 'minitest'
-require 'minitest/reporters'
+require_relative '../test_helper'
 require_relative 'sum_of_numbers.rb'
-
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new({detailed_skip: false})]
 
 class SumOfNumbersTest < Minitest::Test
   def setup
@@ -23,5 +20,3 @@ class SumOfNumbersTest < Minitest::Test
     assert_equal 6, sum
   end
 end
-
-Minitest.autorun

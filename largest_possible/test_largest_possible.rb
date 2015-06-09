@@ -1,8 +1,5 @@
-require 'minitest'
-require 'minitest/reporters'
+require_relative '../test_helper'
 require_relative 'largest_possible'
-
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new({detailed_skip: false})]
 
 class LargestPossibleTest < Minitest::Test
   def setup
@@ -18,6 +15,9 @@ class LargestPossibleTest < Minitest::Test
     given_array = [50, 2, 1, 9]
     assert_equal 95021, LargestPossible.for(given_array)
   end
-end
 
-Minitest.autorun
+  def test_corner_case
+    given_array = [1, 10]
+    assert_equal 110, LargestPossible.for(given_array)
+  end
+end

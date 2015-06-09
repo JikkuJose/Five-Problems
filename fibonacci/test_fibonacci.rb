@@ -1,8 +1,5 @@
-require 'minitest'
-require 'minitest/reporters'
+require_relative '../test_helper'
 require_relative 'fibonacci'
-
-Minitest::Reporters.use! [Minitest::Reporters::DefaultReporter.new({detailed_skip: false})]
 
 class FibonacciTest < Minitest::Test
   def setup
@@ -29,5 +26,3 @@ class FibonacciTest < Minitest::Test
     assert_equal 13, f_list[7]
   end
 end
-
-Minitest.autorun
